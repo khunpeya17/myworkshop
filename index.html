@@ -10,7 +10,7 @@
     <div class="container-fluid py-5">
       <h1 class="text-center mb-3">Hello, Bootstrap!</h1>
       <h1 class="text-center mb-3">Hello</h1>
-      <p class="text-center mb-4">This is a simple example git of using Bootstrap in an HTML file.</p>
+      <p class="text-center mb-4">This is a simple example of using Bootstrap in an HTML file.</p>
 
       <div class="row g-3">
         <div class="col-md-4">
@@ -34,6 +34,13 @@
         </div>
       </div>
 
+      <div class="row mt-5 justify-content-center">
+        <div class="col-auto d-flex gap-2">
+          <button class="btn btn-lg btn-outline-primary">Click Me</button>
+          <button class="btn btn-lg btn-outline-warning">Reset</button>
+        </div>
+      </div>
+
       <div class="row mt-5">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 border">
@@ -48,57 +55,6 @@
         </div>
       </div>
     </div>
-
-      <div class="row mt-5 justify-content-center">
-        <div class="col-12 col-md-8 col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Register</h5>
-              <form id="registerForm" novalidate>
-                <div class="mb-3">
-                  <label for="fullName" class="form-label">Full name</label>
-                  <input type="text" class="form-control" id="fullName" required />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="email" required />
-                </div>
-                <div class="mb-3">
-                  <label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="password" minlength="6" required />
-                </div>
-                <div class="mb-3">
-                  <label for="confirmPassword" class="form-label">Confirm password</label>
-                  <input type="password" class="form-control" id="confirmPassword" minlength="6" required />
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="agree" required />
-                  <label class="form-check-label" for="agree">I agree to the terms</label>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Register</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <script>
-        (function(){
-          const form = document.getElementById('registerForm');
-          if(!form) return;
-          form.addEventListener('submit', function(e){
-            e.preventDefault();
-            const pwd = document.getElementById('password').value;
-            const cpwd = document.getElementById('confirmPassword').value;
-            if(pwd !== cpwd){
-              alert('Passwords do not match');
-              return;
-            }
-            alert('Registered: ' + document.getElementById('fullName').value + '\nEmail: ' + document.getElementById('email').value);
-            form.reset();
-          });
-        })();
-      </script>
 
       <div class="row mt-5">
         <div class="col-12">
